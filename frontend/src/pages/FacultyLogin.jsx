@@ -14,11 +14,11 @@ const login=()=>{
 axios.post(
 "https://quizhub-1-w6co.onrender.com/api/auth/login",
 {
-email,
-password
+  username: email,
+  password
 }
 ).then(res=>{
-
+console.log("LOGIN SUCCESS:", res.data);
 localStorage.setItem(
 "user",
 JSON.stringify(res.data)
@@ -29,6 +29,7 @@ navigate("/dashboard");
 }
 
 }).catch(()=>{
+    console.error(err);
 alert("Invalid Login");
 });
 
