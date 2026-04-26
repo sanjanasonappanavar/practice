@@ -15,7 +15,7 @@ import Results from './pages/Results';
 
 function App(){
  return(
-  <Router>
+  <Router basename="/">
    <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/quizzes" element={<Quizzes/>}/>
