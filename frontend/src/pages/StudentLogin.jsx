@@ -12,7 +12,7 @@ const [password,setPassword]=useState("");
 const login=()=>{
 
 axios.post(
-"http://localhost:8080/api/auth/login",
+"http://quizhub-1-w6co.onrender.com/api/auth/login",
 {
 email,
 password

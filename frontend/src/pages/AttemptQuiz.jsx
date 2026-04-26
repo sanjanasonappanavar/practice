@@ -16,7 +16,7 @@ const [result,setResult]=useState(null);
 useEffect(()=>{
 
 axios
-.get(`http://localhost:8080/api/quizzes/code/${quizCode}`)
+.get(`http://quizhub-1-w6co.onrender.com/api/quizzes/code/${quizCode}`)
 .then(res=>{
 
 setQuiz(res.data);

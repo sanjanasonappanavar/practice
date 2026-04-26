@@ -16,7 +16,7 @@ correctAnswer:""
 const [myQuizzes,setMyQuizzes]=useState([]);
 
 useEffect(()=>{
-axios.get("http://localhost:8080/api/quizzes")
+axios.get("http://quizhub-1-w6co.onrender.com/api/quizzes")
 .then(res=>setMyQuizzes(res.data));
 },[]);
 
