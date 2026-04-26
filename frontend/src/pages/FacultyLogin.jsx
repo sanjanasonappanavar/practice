@@ -14,7 +14,7 @@ const login=()=>{
 axios.post(
 "http://localhost:8080/api/auth/login",
 {
-  username: email,
+  email,
   password
 }
 ).then(res=>{
@@ -25,11 +25,11 @@ JSON.stringify(res.data)
 );
 
 if(res.data.role==="FACULTY"){
-window.location.href = "/dashboard";
+navigate("/dashboard");
 }
 
 }).catch(()=>{
-    console.error(err);
+
 alert("Invalid Login");
 });
 

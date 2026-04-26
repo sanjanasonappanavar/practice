@@ -11,7 +11,7 @@ const navigate=useNavigate();
 
 useEffect(()=>{
 axios
-.get("http://localhost:8080/quizzes")
+.get("http://localhost:8080/api/quizzes")
 .then(res=>setQuizzes(res.data));
 },[]);
 
