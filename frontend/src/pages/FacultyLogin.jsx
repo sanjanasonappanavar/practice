@@ -25,7 +25,7 @@ JSON.stringify(res.data)
 );
 
 if(res.data.role==="FACULTY"){
-navigate("/dashboard");
+window.location.href = "/dashboard";
 }
 
 }).catch(()=>{
