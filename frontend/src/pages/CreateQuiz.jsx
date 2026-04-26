@@ -13,7 +13,7 @@ duration:''
 const save=async()=>{
 const user=JSON.parse(localStorage.getItem('user'));
 
-await axios.post('https://quizhub-1-w6co.onrender.com/api/quizzes',{
+await axios.post('http://localhost:8080/api/quizzes',{
 ...quiz,
 facultyId:user.id,
 quizCode:'JAVA'+Math.floor(Math.random()*10000)

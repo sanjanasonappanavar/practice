@@ -16,7 +16,7 @@ const [result,setResult]=useState(null);
 useEffect(()=>{
 
 axios
-.get(`https://quizhub-1-w6co.onrender.com/api/quizzes/code/${quizCode}`)
+.get(`http://localhost:8080/api/quizzes/code/${quizCode}`)
 .then(res=>{
 
 setQuiz(res.data);
@@ -90,7 +90,7 @@ score++;
 const user=JSON.parse(localStorage.getItem("user"));
 
 await axios.post(
-"https://quizhub-1-w6co.onrender.com/api/results",
+"http://localhost:8080/api/results",
 {
 studentEmail:user?.email || "unknown",
 quizCode:quiz.quizCode,

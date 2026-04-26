@@ -9,7 +9,7 @@ const [data,setData]=useState([]);
 const loadResults=()=>{
 
 axios.get(
-`https://quizhub-1-w6co.onrender.com/api/results/${quizCode}`
+`http://localhost:8080/api/results/${quizCode}`
 )
 .then(res=>setData(res.data));
 

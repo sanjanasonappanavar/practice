@@ -11,7 +11,7 @@ const navigate=useNavigate();
 
 useEffect(()=>{
 axios
-.get("https://quizhub-1-w6co.onrender.com/quizzes")
+.get("http://localhost:8080/quizzes")
 .then(res=>setQuizzes(res.data));
 },[]);
 

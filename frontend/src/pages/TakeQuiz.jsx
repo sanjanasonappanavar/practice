@@ -7,7 +7,7 @@ const {id}=useParams();
 const [quiz,setQuiz]=useState({});
 
 useEffect(()=>{
-axios.get('https://quizhub-1-w6co.onrender.com/api/quizzes/'+id)
+axios.get('http://localhost:8080/api/quizzes/'+id)
 .then(r=>setQuiz(r.data));
 },[] )
 
