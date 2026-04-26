@@ -16,7 +16,7 @@ correctAnswer:""
 const [myQuizzes,setMyQuizzes]=useState([]);
 
 useEffect(()=>{
-axios.get("http://quizhub-1-w6co.onrender.com/api/quizzes")
+axios.get("https://quizhub-1-w6co.onrender.com/api/quizzes")
 .then(res=>setMyQuizzes(res.data));
 },[]);
 
@@ -47,7 +47,7 @@ return;
 
 const quizCode=Math.random().toString(36).substring(2,8).toUpperCase();
 
-axios.post("http://quizhub-1-w6co.onrender.com/api/quizzes",{
+axios.post("https://quizhub-1-w6co.onrender.com/api/quizzes",{
 title,
 duration,
 quizCode,
@@ -59,7 +59,7 @@ alert("Quiz Created");
 setQuestions([]);
 setTitle("");
 
-axios.get("http://quizhub-1-w6co.onrender.com/api/quizzes")
+axios.get("https://quizhub-1-w6co.onrender.com/api/quizzes")
 .then(res=>setMyQuizzes(res.data));
 
 });
@@ -273,12 +273,12 @@ Copy Link
 onClick={async ()=>{
 
 await axios.delete(
-`http://quizhub-1-w6co.onrender.com/api/quizzes/${q.id || q._id}`
+`https://quizhub-1-w6co.onrender.com/api/quizzes/${q.id || q._id}`
 );
 
 alert("Deleted");
 
-axios.get("http://quizhub-1-w6co.onrender.com/api/quizzes")
+axios.get("https://quizhub-1-w6co.onrender.com/api/quizzes")
 .then(res=>setMyQuizzes(res.data));
 
 }}
